@@ -37,10 +37,15 @@ class pushpushDiv {
       
     }
     clickDiv(e) {
-      if(e.target.children[0].innerHTML == this.targNum) {
-        alert(e.target.children[0].innerHTML);
+      if(e.target.children[0].innerHTML == this.targNum && this.targNum == 8) {
+        clearInterval(this.timer);
+        alert(`YOUR SCORE : ${this.min} : ${this.sec}`)
+      }
+      else if(e.target.children[0].innerHTML == this.targNum) {
+        // alert(e.target.children[0].innerHTML);
         this.targNum++;
       }
+      
         // alert(e.target.children[0].innerHTML);
     }
     method() {
