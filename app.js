@@ -8,7 +8,12 @@ class pushpushDiv {
         this.min = 0;
         this.sec = 0;
         this.init();
-        setInterval(this.scoreTime, 1000);
+        document.querySelector('.main__time').innerHTML = `${this.min} : ${this.sec}`;
+        clearInterval(this.timer);
+
+        this.timer = setInterval(() => {
+            this.scoreTime();
+          }, 1000);
       })
       let divs = document.querySelectorAll(".divs__div");
       divs.forEach((div) => {
@@ -50,7 +55,7 @@ class pushpushDiv {
         this.min++;
       } 
       else {
-        // this.sec++;
+        this.sec++;
       }
       document.querySelector('.main__time').innerHTML = `${this.min} : ${this.sec}`;
     }
