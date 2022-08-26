@@ -107,5 +107,13 @@ html, body {
       transform: rotateY(0deg);
 
     }
+    &.flipped {
+        .front {
+            transform: rotateY(180deg);
+        }
+        .back {
+            transform: rotateY(0deg);
+        }
+    }
   }
 }

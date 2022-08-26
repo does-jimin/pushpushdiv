@@ -103,5 +103,11 @@ html, body {
 .divs__div:hover .back {
   transform: rotateY(0deg);
 }
+.divs__div.flipped .front {
+  transform: rotateY(180deg);
+}
+.divs__div.flipped .back {
+  transform: rotateY(0deg);
+}
 
 /*# sourceMappingURL=style.css.map */

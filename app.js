@@ -34,15 +34,21 @@ class pushpushDiv {
         // div.style.backgroundColor = "red";
         div.innerHTML = nums[i];
       })
+      document.querySelectorAll('.divs__div').forEach((el, i) => {
+        // div.style.backgroundColor = "red";
+        el.classList.remove('flipped');
+      })
       
     }
     clickDiv(e) {
       if(e.target.children[0].innerHTML == this.targNum && this.targNum == 8) {
         clearInterval(this.timer);
+        e.target.classList.add('flipped');
         alert(`YOUR SCORE : ${this.min} : ${this.sec}`)
       }
       else if(e.target.children[0].innerHTML == this.targNum) {
         // alert(e.target.children[0].innerHTML);
+        e.target.classList.add('flipped');
         this.targNum++;
       }
       
